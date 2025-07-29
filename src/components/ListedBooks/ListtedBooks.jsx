@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoreReadList } from '../Utility/addToDb';
 import Book from '../Book/Book';
+import { Helmet } from 'react-helmet-async';
 
 const ListtedBooks = () => {
   const [redList, setReadList]= useState([]);
@@ -19,6 +20,9 @@ const ListtedBooks = () => {
 
     return (
         <div>
+          <Helmet>
+            <title>book poka || ListedBooks</title>
+          </Helmet>
             <h3 className="text-3xl my-8">Listed Books</h3>
 
   
